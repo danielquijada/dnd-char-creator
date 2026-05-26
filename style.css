@@ -1,0 +1,41 @@
+/* Header */
+
+header {
+  position: fixed;
+  top: 0;
+  background-color: #800020;
+  width: 100%;
+  height: 3vh;
+  line-height: 0;
+  padding: 2vh;
+  font-size: small;
+  color: goldenrod;
+}
+
+/* Body */
+
+body {
+  background-color: #f0eeef;
+  margin: 0;
+}
+
+div.info-block {
+  background-color: rgb(245, 239, 220);
+  border: 2px solid darkblue;
+  display: inline-block;
+  margin: 1vh 1vw;
+  padding: 1vh 1vw;
+  border-radius: 1.5vw;
+  height: 87vh;
+  position: fixed;
+  top: 8vh;
+}
+
+div.info-block.result {
+  right: 0;
+  width: 15vw;
+}
+
+div.info-block.selector {
+  width: calc(78vw - 8px);
+}
