@@ -85,6 +85,10 @@ div.option:hover {
   cursor: pointer;
 }
 
+div.option.selected {
+  outline: 4px solid #00ff00;
+}
+
 div.option>.option-text {
   flex: 1;
   overflow-y: hidden;
