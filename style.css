@@ -90,4 +90,21 @@ div.option>.option-text {
   overflow-y: hidden;
   min-height: 0;
   word-break: break-word;
+  position: relative;
+}
+
+div.option>.option-text>a.read-more {
+  display: none;
+  color: lightblue;
+  background-color: darkblue;
+  border-bottom: 1px solid lightblue;
+  line-height: 0.7rem;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  cursor: zoom-in;
+}
+
+div.option>.option-text.clipped>a.read-more {
+  display: inline-block;
 }
