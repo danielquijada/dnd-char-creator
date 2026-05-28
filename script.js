@@ -1,10 +1,13 @@
 import { testSelections } from "./test-selection.js";
 
+/*************************************** INIT ****************************************************/
+
 const selections = [];
 let currentSelection;
 
 const chosenOptions = [];
 
+// TODO Remove this test selections. Replace with a real mapper from json.
 testSelections.forEach(testSelection => addSelection(testSelection));
 startSelections();
 
