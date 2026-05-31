@@ -1,0 +1,15 @@
+/*
+ * Narrative effect, useful for character creation, even if it doesn't have a significant mechanical effect.
+ * Examples: age, height.
+ *
+ * They follow this format, ignoring other fields.
+ */
+{
+  "type": "narrative",
+  "name": "Name of the field", // For example: "Age"
+  "details": "More detailed description of the field. $minAge to $maxAge",
+  "values": { // Values to be interpolated in the details section.
+    "minAge": "0",
+    "maxAge": "90"
+  }
+}
