@@ -1,5 +1,5 @@
 const testSelection = {
-  title: 'Select some things while testing',
+  title: 'Select a few (non-canary) things while testing',
   choose: 2,
   options: [
     {

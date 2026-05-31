@@ -1,17 +1,31 @@
 import { testSelections } from "./test-selection.js";
+import { startingSelections } from "./data/selections.js";
+import { registerTranslation, changeLanguage, rewriteRegistered } from "./i18n/translator.js";
 
 /*************************************** INIT ****************************************************/
 
-const selections = [];
+const selections = startingSelections;
 let currentSelection;
+
+window.es = () => changeLanguage('es');
+window.en = () => changeLanguage('en');
 
 const chosenOptions = [];
 
 // TODO Remove this test selections. Replace with a real mapper from json.
-testSelections.forEach(testSelection => addSelection(testSelection));
+//testSelections.forEach(testSelection => addSelection(testSelection));
+initUi();
 startSelections();
 
 /*************************************************************************************************/
+
+/**
+ * Registers ui elements to the translator
+ */
+function initUi() {
+  registerTranslation(document.querySelector('#header-title'), 'ui.title');
+  rewriteRegistered();
+}
 
 /**
  * Adds a new selection to the array of selections. Specifically, adds it after its master selection (the selection that made this selection necessary)
@@ -59,7 +73,7 @@ function nextSelection() {
  */
 function setSelection(selection) {
   const selectorBlockTitle = document.querySelector('#selector-block>#selection-title');
-  selectorBlockTitle.innerText = selection.title;
+  registerTranslation(selectorBlockTitle, selection.title)
 
   clearOptions();
   selection.options.forEach((opt, index) => addOption(opt.title, opt.text, index));
@@ -92,17 +106,17 @@ function createOption(title, content, index) {
 
   const header = document.createElement('h2');
   header.classList.add('option-title');
-  header.innerHTML = title;
+  registerTranslation(header, title);
   option.appendChild(header);
 
   const text = document.createElement('div');
   text.classList.add('option-text');
-  text.innerHTML = content;
+  registerTranslation(text, content);
   option.appendChild(text);
 
   const readMore = document.createElement('a');
   readMore.classList.add('read-more');
-  readMore.innerHTML = 'read more';
+  registerTranslation(readMore, "ui.read-more");
   text.appendChild(readMore);
 
   option.onclick = () => toggleOptionSelection(index);

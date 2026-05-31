@@ -4,22 +4,51 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>DnD Char Selector</title>
+  <title>DnD Character Selector</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="shortcut icon" href="https://www.google.com/s2/favicons?sz=64&domain=roll20.net" type="image/x-icon">
 </head>
 
 <body>
   <!-- Header -->
   <header>
-    <h1>DnD Character Selector</h1>
+    <h1 id="header-title">DnD Character Selector</h1>
   </header>
 
+  <!-- Selector -->
   <div class="info-block selector" id="selector-block">
     <h1 id="selection-title">Selection</h1>
     <div id="option-list">
     </div>
   </div>
-  <div class="info-block result" id="result-block">Here goes the result</div>
+
+  <!-- Results (Partial) -->
+  <div class="info-block result" id="result-block">
+    <h1 id="partial-results-title">Results</h1>
+    <div id="result-list">
+      <div class="result-item"><span class="result-item-title">Stat 1:</span><span class="result-item-value">+1</span>
+      </div>
+      <div class="result-item"><span class="result-item-title">Stat 2:</span><span class="result-item-value">+2</span>
+      </div>
+      <div class="result-item"><span class="result-item-title">Stat 3:</span><span class="result-item-value">+3</span>
+      </div>
+      <div class="result-item"><span class="result-item-title">Stat 4:</span><span class="result-item-value">+4</span>
+      </div>
+      <div class="result-item"><span class="result-item-title">Stat 5:</span><span class="result-item-value">+5</span>
+      </div>
+      <div class="result-item"><span class="result-item-title">Stat 6:</span><span class="result-item-value">+6</span>
+      </div>
+      <div class="result-item"><span class="result-item-title">Stat 7:</span><span class="result-item-value">+7</span>
+      </div>
+      <div class="result-item"><span class="result-item-title">Stat 8:</span><span class="result-item-value">+8</span>
+      </div>
+      <div class="result-item"><span class="result-item-title">Stat 9:</span><span class="result-item-value">+9</span>
+      </div>
+      <div class="result-item"><span class="result-item-title">Stat 10, str (or strength):</span><span
+          class="result-item-value">+10</span>
+      </div>
+    </div>
+  </div>
   <script type="module" src="script.js"></script>
 </body>
 

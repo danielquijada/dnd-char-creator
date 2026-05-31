@@ -1,6 +1,6 @@
 export const raceSelection = {
   "id": "race",
-  "title": "races.race-title",
+  "title": "races.race.title",
   "choose": 1,
   "options": [
     {
