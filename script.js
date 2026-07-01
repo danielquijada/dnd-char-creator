@@ -155,7 +155,7 @@ function toggleOptionSelection(index) {
   if (!chosen.includes(index)) {
     chosen.push(index);
   } else {
-    chosen.splice(chosen.indexOf(index));
+    chosen.splice(chosen.indexOf(index), 1);
   }
 
   toggleSelectedClass(index);
